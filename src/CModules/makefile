@@ -1,12 +1,12 @@
 
-CC := gcc
+CC := gcc32
 CFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror
 LINKERFLAGS := -fPIC -shared
 
 PROGRAM := libnum.so
 
 SRCS := $(wildcard *.c)
-OBJS := $(patsubst %.c, %.o, $(wildcard *.c))
+OBJS := $(patsubst %.c, %.o, $(wildcard *.c)) addInt_.obj
 
 
 $(PROGRAM): $(OBJS)

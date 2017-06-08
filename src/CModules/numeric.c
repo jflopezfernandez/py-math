@@ -1,4 +1,12 @@
 
+/** Assembly Procedures:
+ * 	1. addInt_
+ *
+ */
+
+extern int addInt_(int a, int b);
+
+
 /** Function: Returns Greatest Common Denominator of (m,n)
  *
  *  	TODO: Need to add bounds checking to the function. There is no
@@ -30,4 +38,28 @@ int getLCM(int m, int n) {
 	int gcd = getGCD(m, n);
 
 	return ((m * n) / gcd);
+}
+
+
+/** ----- ----- ----- Assembly Procedure Wrappers: ----- ----- ----- */
+
+
+/** Test Function: Add Two Integers
+ *
+ *  Note: This function is for testing purposes only. I'm using Microsoft
+ *		  Macro Assembler instead of FASM here so I'm making sure that there 
+ *	 	  aren't any compatibility issues, especially because I'm compiling
+ * 		  this C unit as a Unix-style shared-object library.
+ *
+ * 		  I'm pretty sure this C wrapper nullifies any benefit to calling an
+ * 		  assembly function in the first place because now there are two pointer
+ * 		  lookups as opposed to just one. On the other hand, the procedure is so
+ * 		  small any latency is too small to make a difference, most likely.
+ *
+ */
+
+int asm_addInt(int a, int b) {
+	int result = addInt_(a,b);
+
+	return result;
 }

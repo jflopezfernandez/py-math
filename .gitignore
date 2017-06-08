@@ -1,6 +1,7 @@
 # Compiler-generated binaries
 *.exe
 *.o
+*.obj
 *.so
 
 # Directories
