@@ -1,14 +1,20 @@
-def ggetGCD(m, n):
-	r = m % n;
+"""
+	Number class
 
-	while (r != 0):
-		m = n;
-		n = r;
+"""
 
-		r = m % n;
+# Standard Python Imports
+import ctypes
 
-	return n;
+_gcd = ctypes.CDLL('libnum.so');
+_gcd.getGCD.argtypes = (ctypes.c_int, ctypes.c_int)
 
+def getGCD_Wrapper(number1, number2):
+	global _gcd
+
+	result = _gcd.getGCD(ctypes.c_int(number1), ctypes.c_int(number2))
+
+	return int(result)
 
 class Fraction:
 	def __init__(self, numerator, denominator):
@@ -42,7 +48,7 @@ class Fraction:
 			return result;
 
 	def simplify(self):
-		gcd = ggetGCD(self.numerator, self.denominator);
+		gcd = getGCD_Wrapper(self.numerator, self.denominator);
 
 		if (gcd > 1):
 			self.numerator = int(self.numerator / gcd);

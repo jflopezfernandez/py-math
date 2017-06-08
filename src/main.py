@@ -8,27 +8,24 @@ Author: Jose Lopez
 
 # Euclid's Algorithm to determine the Greatest Common Divisor
 # Standard Python Modules
-import ctypes
+import sys
 
 
 # Application Files
 import number
 
 
-_gcd = ctypes.CDLL('libnum.so');
-_gcd.getGCD.argtypes = (ctypes.c_int, ctypes.c_int)
+# Parse command line arguments
+if (len(sys.argv) > 1):
+	print("Parsing command line options... ")
+	
+	if (len(sys.argv) == 3):
+		m = int(sys.argv[1])
+		n = int(sys.argv[2])
 
-print("Please enter two numbers: ")
+		g = number.getGCD_Wrapper(m,n);
 
-a = int(input("m: "))
-b = int(input("n: "))
+		print("GCD(", m, ",", n, ") = ", g)
+else:
+	print("[No arguments passed in]")
 
-def our_function(number1, number2):
-	global _gcd
-
-	result = _gcd.getGCD(ctypes.c_int(number1), ctypes.c_int(number2))
-
-	return int(result)
-
-g = our_function(a, b)
-print("gcd = ", g)
