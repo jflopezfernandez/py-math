@@ -1,9 +1,9 @@
 
 CC := gcc32
 CFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror
-LINKERFLAGS := -fPIC -shared
+LINKERFLAGS := -shared
 
-PROGRAM := libnum.so
+PROGRAM := libnum.dll
 
 SRCS := $(wildcard *.c)
 OBJS := $(patsubst %.c, %.o, $(wildcard *.c)) addInt_.obj
@@ -16,4 +16,5 @@ $(OBJS): $(SRCS)
 	$(CC) -c $(CFLAGS) $(SRCS)
 
 clean:
-	rm -rf $(wildcard *.o)
+	rm -rf $(wildcard *.o | *.obj)
+	rm -rf $(wildcard ../*.dll)

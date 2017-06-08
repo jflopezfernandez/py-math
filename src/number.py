@@ -6,7 +6,7 @@
 # Standard Python Imports
 import ctypes
 
-_numeric = ctypes.CDLL('libnum.so');
+_numeric = ctypes.CDLL('libnum.dll');
 
 _numeric.getGCD.argtypes = (ctypes.c_int, ctypes.c_int)
 _numeric.getLCM.argtypes = (ctypes.c_int, ctypes.c_int)

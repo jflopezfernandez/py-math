@@ -1,4 +1,7 @@
 
+#include <stdio.h>
+
+
 /** Assembly Procedures:
  * 	1. addInt_
  *
@@ -7,7 +10,8 @@
 extern int addInt_(int a, int b);
 
 
-/** Function: Returns Greatest Common Denominator of (m,n)
+/** Function: Euclid's Algorithm to Determine Greatest Common Divisor.
+ * 			  Returns the GCD of (m,n).
  *
  *  	TODO: Need to add bounds checking to the function. There is no
  * 			  mechanism in place to deal with a divide by zero error right

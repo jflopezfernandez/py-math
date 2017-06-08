@@ -3,6 +3,7 @@
 *.o
 *.obj
 *.so
+*.dll
 
 # Directories
 /src/__pycache__/

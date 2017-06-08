@@ -1,7 +1,9 @@
 ::@echo off
 
-::ml /Gd /Fo ../CModules/addInt_ asm/addInt_.asm /W4
-cd CModules
+cd asm
+ml /Cx /Gd /Fo ..\CModules\addInt_.obj /c addInt_.asm /W4
+
+cd ../CModules
 make
 
 cd ..
