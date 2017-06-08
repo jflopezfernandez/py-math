@@ -1,0 +1,4 @@
+
+Note: I am currently compiling the program for x86, since I haven't quite gotten the hang of x64 assembly. I'll update the makefile sometime next week to read in configuration options so the project can be compiled for 32 or 64bit, depending on if the user wants to exclude the 32bit assembly subroutines, which are just for testing purposes right now.
+
+To build the project as is under Windows, run build.bat. I still need to make some adjustments to make the program cross-compatible with *nix systems. Part of the configuration file will take in the operating system type to determine whether a *.dll or *.so extension should be used for library files.
