@@ -41,6 +41,21 @@ int getLCM(int m, int n) {
 }
 
 
+/** ----- ----- ----- ----- TEST FUNCTIONS ----- ----- ----- ----- */
+
+/** Test Function: Print Debug Message
+ *
+ * 	Note: Function returns nothing. It is used solely for the purpose
+ * 	 	  of verifying the the dll export/import configuration works
+ * 		  as expected.
+ *
+ */
+
+void testPrintDebug() {
+	printf("[NUMERIC.C] Testing... \n");
+}
+
+
 /** ----- ----- ----- Assembly Procedure Wrappers: ----- ----- ----- */
 
 

@@ -10,9 +10,13 @@ Author: Jose Lopez
 # Standard Python Modules
 import sys
 
+from ctypes import *
+
+windll.msvcrt.printf(b"spam")
 
 # Application Files
-import number
+#import number
+
 
 
 # Parse command line arguments
@@ -32,6 +36,5 @@ if (len(sys.argv) > 1):
 
 		print(m, " + ", n ," = ", a)
 
-else:
-	print("[No arguments passed in]")
-
+#else:
+	#print("[No arguments passed in]")
