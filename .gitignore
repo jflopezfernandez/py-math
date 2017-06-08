@@ -1,0 +1,7 @@
+# Compiler-generated binaries
+*.exe
+*.o
+*.so
+
+# Directories
+/src/__pycache__/
