@@ -1,4 +1,4 @@
-def getGCD(m, n):
+def ggetGCD(m, n):
 	r = m % n;
 
 	while (r != 0):
@@ -42,7 +42,7 @@ class Fraction:
 			return result;
 
 	def simplify(self):
-		gcd = getGCD(self.numerator, self.denominator);
+		gcd = ggetGCD(self.numerator, self.denominator);
 
 		if (gcd > 1):
 			self.numerator = int(self.numerator / gcd);
