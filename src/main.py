@@ -9,11 +9,9 @@ Author: Jose Lopez
 # Euclid's Algorithm to determine the Greatest Common Divisor
 # Standard Python Modules
 import sys
-import ctypes
 
 # Application Files
 import number
-
 
 
 # Parse command line arguments

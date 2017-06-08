@@ -4,7 +4,7 @@
 """
 
 # Standard Python Imports
-import ctypes
+from ctypes import *
 
 _numeric = ctypes.CDLL('libnum.dll');
 
