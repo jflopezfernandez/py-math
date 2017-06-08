@@ -6,9 +6,10 @@ Author: Jose Lopez
 		Numerical processing library prototype written in Python, with some optimizations in Cython, eventually.
 """
 
-# Euclid's Algorithm to determine the Greatest Common Divisor
 # Standard Python Modules
 import sys
+
+from ctypes import *
 
 # Application Files
 import number
