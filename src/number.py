@@ -6,13 +6,23 @@
 # Standard Python Imports
 import ctypes
 
-_gcd = ctypes.CDLL('libnum.so');
-_gcd.getGCD.argtypes = (ctypes.c_int, ctypes.c_int)
+_numeric = ctypes.CDLL('libnum.so');
+
+_numeric.getGCD.argtypes = (ctypes.c_int, ctypes.c_int)
+_numeric.getLCM.argtypes = (ctypes.c_int, ctypes.c_int)
+
 
 def getGCD_Wrapper(number1, number2):
-	global _gcd
+	global _numeric
 
-	result = _gcd.getGCD(ctypes.c_int(number1), ctypes.c_int(number2))
+	result = _numeric.getGCD(ctypes.c_int(number1), ctypes.c_int(number2))
+
+	return int(result)
+
+def getLCM_Wrapper(number1, number2):
+	global _numeric
+
+	result = _numeric.getLCM(ctypes.c_int(number1), ctypes.c_int(number2))
 
 	return int(result)
 

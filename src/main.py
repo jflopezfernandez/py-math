@@ -23,9 +23,11 @@ if (len(sys.argv) > 1):
 		m = int(sys.argv[1])
 		n = int(sys.argv[2])
 
-		g = number.getGCD_Wrapper(m,n);
+		g = number.getGCD_Wrapper(m,n)
+		l = number.getLCM_Wrapper(m,n)
 
 		print("GCD(", m, ",", n, ") = ", g)
+		print("LCM(", m, ",", n, ") = ", l)
 else:
 	print("[No arguments passed in]")
 
