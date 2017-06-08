@@ -1,2 +1,0 @@
-# Euclid's Algorithm
-
