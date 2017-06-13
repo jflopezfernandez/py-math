@@ -6,7 +6,7 @@ LINKERFLAGS := -shared
 PROGRAM := libnum.dll
 
 SRCS := $(wildcard *.c)
-OBJS := $(patsubst %.c, %.o, $(wildcard *.c)) addInt_.obj
+OBJS := $(patsubst %.c, %.o, $(wildcard *.c)) #addInt_.obj
 
 
 $(PROGRAM): $(OBJS)

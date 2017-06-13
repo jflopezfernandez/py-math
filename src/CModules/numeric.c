@@ -77,8 +77,10 @@ void testPrintDebug() {
  *
  */
 
+/*
 int asm_addInt(int a, int b) {
 	int result = addInt_(a,b);
 
 	return result;
 }
+*/
