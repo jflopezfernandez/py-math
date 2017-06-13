@@ -35,10 +35,13 @@ def timer(func, *args):
 
 def printTimer(func, *args):
 	"""
-	Function that prints elapsed time
+	Function that prints elapsed time using timer function
+
+	Example Usage: printTimer(print, "test")
+		Prints test 1000 times and prints elapsed time
 	"""
 
 	t = timer(func, *args)
 	print("Time Elapsed: ", t)
 
-printTimer(print, "test")
+
