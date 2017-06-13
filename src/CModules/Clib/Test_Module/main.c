@@ -1,12 +1,21 @@
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "includes/Main.h"
 
-typedef int make_iso_compilers_happy;
+
+extern int getGCD(int m, int n);
+
 
 int main()
 {
-    printf("testing...\n");
+    int a,
+		b;
+	
+	printf("Enter two numbers: ");
+	scanf("%i %i", &a, &b);
+	
+	int result = getGCD(a,b);
+	printf("Result: %i\n", result);
+	
 
     return EXIT_SUCCESS;
 }

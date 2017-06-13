@@ -1,8 +1,18 @@
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "includes/Main.h"
 
 
-__declspec(dllexport) void __cdecl testPrint() {
-    printf("testing DLL function...\n");
+__declspec (dllexport) int getGCD(int m, int n) {
+	int r = m % n;
+	
+	while (r != 0) {
+		m = n;
+		n = r;
+		
+		r = m % n;
+	}
+	
+	return n;
 }
+
+
