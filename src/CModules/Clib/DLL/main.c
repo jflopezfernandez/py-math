@@ -21,5 +21,3 @@ __declspec (dllexport) int getLCM(int m, int n) {
 	
 	return ((m * n) / gcd);
 }
-
-

@@ -6,19 +6,12 @@ extern int getGCD(int m, int n);
 extern int getLCM(int m, int n);
 
 
+const char *name = "user";
+
+
 int main()
 {
-    int a,
-		b;
-	
-	printf("Enter two numbers: ");
-	scanf("%i %i", &a, &b);
-	
-	int gcd = getGCD(a,b);
-	printf("GCD: %i\n", gcd);
-	
-	int lcm = getLCM(a,b);
-	printf("LCM: %i\n", lcm);
+    printf("%s\n", name);
 	
 
     return EXIT_SUCCESS;
