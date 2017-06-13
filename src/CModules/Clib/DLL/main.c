@@ -16,3 +16,10 @@ __declspec (dllexport) int getGCD(int m, int n) {
 }
 
 
+__declspec (dllexport) int getLCM(int m, int n) {
+	int gcd = getGCD(m,n);
+	
+	return ((m * n) / gcd);
+}
+
+
