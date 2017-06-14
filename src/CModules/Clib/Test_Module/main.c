@@ -1,18 +1,12 @@
 
-#include "includes/Main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-
-extern int getGCD(int m, int n);
-extern int getLCM(int m, int n);
-
-
-const char *name = "user";
-
+typedef int make_iso_compilers_happy;
 
 int main()
 {
-    printf("%s\n", name);
-	
+    printf("testing...\n");
 
     return EXIT_SUCCESS;
 }
